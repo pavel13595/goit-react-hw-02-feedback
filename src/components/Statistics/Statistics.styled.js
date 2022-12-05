@@ -15,5 +15,10 @@ export const Statistic = styled.p`
 export const Percentage = styled.p`
   font-size: 18px;
   font-weight: bold;
-  color: ${props => (props.children[1] >= 50 ? 'green' : 'red')};
+  color: ${props =>
+    props.children[1] >= 75
+      ? 'green'
+      : 'red' && props.children[1] >= 35
+      ? 'orange'
+      : 'red'};
 `;

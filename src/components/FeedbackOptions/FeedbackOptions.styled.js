@@ -22,9 +22,14 @@ export const Button = styled.button`
     transition: all 0.2s ease-in-out 0s;
   }
   :active {
-    background-color: #326de1;
     transform: translateY(4px);
-    transition: all 0.2s ease-in-out 0s;
+    transition: all 0.1s ease-in-out 0s;
     border: 3px solid #326de1;
+    background-color: ${props =>
+      props.name === 'good'
+        ? 'green'
+        : 'red' && props.name === 'neutral'
+        ? 'orange'
+        : 'red'};
   }
 `;
