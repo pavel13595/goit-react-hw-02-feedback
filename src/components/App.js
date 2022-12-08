@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import { Container, GlobalStyle } from './GlobalStyle';
+import { Container } from './GlobalStyle';
+
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
@@ -53,8 +54,6 @@ export class App extends Component {
         ) : (
           <Notification message="There is no feedback!!!" />
         )}
-
-        <GlobalStyle />
       </Container>
     );
   }
